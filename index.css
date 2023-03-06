@@ -1,0 +1,85 @@
+/* .container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+button {
+  font-size: 16px;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0062cc;
+} */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #e6e6e6;
+  font-family: "Roboto", sans-serif;
+}
+.jumbotron h1 {
+  color: #000000;
+  padding-left: 24px;
+  font-size: 50px;
+}
+
+.jumbotron p {
+  color: #000000;
+  margin-top: 20px;
+  opacity: 0.8;
+  padding-left: 32px;
+}
+
+.onesidedropshadow {
+  -webkit-box-shadow: 0 8px 6px -6px black;
+  -moz-box-shadow: 0 8px 6px -6px black;
+  box-shadow: 0 8px 50px -6px black;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+.jumbotron {
+  background-image: url(https://picjumbo.imgix.net/HNCK4023.jpg?q=40&w=1650&sharp=30);
+  background-position: 0% 55%;
+  background-size: cover;
+
+}
+#text{
+  width: 50%;
+  height: 250px;
+  position: relative;
+  float: right;
+
+}
+
+
+
+
