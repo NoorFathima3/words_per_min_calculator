@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Word count per minute</title>
     <link rel="stylesheet" href="index.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
@@ -22,29 +22,52 @@
     <div class="jumbotron">
       <div class="onesidedropshadow">
         <h1 class="jumbotronText">Welcome</h1>
-        <p class="jumbotronText">You can test your typing speed here.</p>
+        <p class="jumbotronText">You can test your typing speed here...</p>
+        <marquee
+          >A high WPM allows individuals to complete tasks more quickly and
+          efficiently. This is particularly important in professions that
+          require a lot of typing, such as data entry, transcription, or content
+          creation. A higher WPM can help individuals meet deadlines and improve
+          their overall productivity.
+        </marquee>
       </div>
     </div>
     <div class="container">
       <div class="sub-container">
         <div class="info">
-          <p>Time elapsed: <span id="time">0</span> seconds.</p>
+          <p class="time-elapsed">
+            Time elapsed: <span id="time">0</span> seconds.
+          </p>
           <p>Words per minute: <span id="wpm">0</span> WPM.</p>
-          <div class="buttoncontainer">
-            <p id="random-paragraph"></p>
-
-            <button id="start" type="button" class="btn btn-primary">
-              Start
-            </button>
-            <button id="stop" type="button" class="btn btn-danger">Stop</button>
-
-            <button id="restart" type="button" class="btn btn-dark">
-              Restart
-            </button>
-          </div>
         </div>
-        <div><textarea id="text" placeholder="Type here..."></textarea></div>
+        <div class="text-field-styles">
+          <p id="random-paragraph" placeholder="Type here...">
+            Click on Start to generate a paragraph..
+          </p>
+          <textarea id="text" placeholder="Type here..."></textarea>
+        </div>
+        <div class="buttoncontainer">
+          <button id="start" type="button" class="btn btn-primary">
+            Start
+          </button>
+          <button id="stop" type="button" class="btn btn-danger">Stop</button>
+
+          <button id="restart" type="button" class="btn btn-dark">
+            Restart
+          </button>
+        </div>
       </div>
+    </div>
+    <center>
+      <footer>
+        By Noor Fathima you can visit my account by clicking here
+        <a href="https://github.com/NoorFathima3/words_per_min_calculator"
+          >Github</a
+        >
+      </footer>
+    </center>
+    <div>
+      <p id="currenttime">0</p>
     </div>
     <script src="script.js"></script>
     <script

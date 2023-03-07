@@ -43,6 +43,9 @@ body {
   background-color: #e6e6e6;
   font-family: "Roboto", sans-serif;
 }
+.time-elapsed {
+  font-size: 22px;
+}
 .jumbotron h1 {
   color: #000000;
   padding-left: 24px;
@@ -57,29 +60,121 @@ body {
 }
 
 .onesidedropshadow {
-  -webkit-box-shadow: 0 8px 6px -6px black;
-  -moz-box-shadow: 0 8px 6px -6px black;
-  box-shadow: 0 8px 50px -6px black;
   height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-
 }
 .jumbotron {
-  background-image: url(https://picjumbo.imgix.net/HNCK4023.jpg?q=40&w=1650&sharp=30);
-  background-position: 0% 55%;
-  background-size: cover;
-
+  -webkit-box-shadow: 0 8px 6px -6px black;
+  -moz-box-shadow: 0 8px 6px -6px black;
+  box-shadow: 0 8px 50px -6px black;
 }
-#text{
+#text {
+  width: 45%;
+  padding: 10px;
+}
+
+.container {
+  margin-top: 8%;
+  border-radius: 10px;
+  padding: 30px;
+  -webkit-box-shadow: 0 8px 6px -6px black;
+  -moz-box-shadow: 0 8px 6px -6px black;
+  box-shadow: 0 8px 50px -6px black;
+  height: 500px;
+}
+
+.text-field-styles {
+  display: flex;
+  justify-content: space-between;
+  height: 200px;
+}
+#random-paragraph {
+  padding-left: 20px;
+  font-size: 16px;
+  border: 1px solid #979393;
+  border-radius: 10px;
+  color: #352a2a99;
   width: 50%;
-  height: 250px;
-  position: relative;
-  float: right;
-
+  height: 200px;
 }
 
+.buttoncontainer {
+  position: relative;
+  top: 20px;
+  display: flex;
+  align-items: end;
+  width: 30%;
+  justify-content: space-evenly;
+}
 
+footer {
+  position: relative;
+  top: 20px;
+}
 
+#time {
+  color: red;
+  font-size: 25px;
+}
 
+#wpm {
+  color: green;
+  font-size: 25px;
+}
+
+#currenttime {
+  padding-left: 30px;
+}
+
+@media only screen and (min-width: 220px) and (max-width: 870px) {
+  .container {
+    border: 2px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .sub-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #random-paragraph {
+    padding-left: 20px;
+    font-size: 16px;
+    border: 1px solid #979393;
+    border-radius: 10px;
+    color: #352a2a99;
+    width: 100%;
+  }
+
+  .text-field-styles {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  #text {
+    width: 100%;
+    height: 300px;
+  }
+  .buttoncontainer {
+    width: 100%;
+  }
+  #time {
+    color: red;
+    font-size: 25px;
+  }
+
+  #wpm {
+    color: green;
+    font-size: 25px;
+  }
+  #currenttime {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 30px;
+  }
+}

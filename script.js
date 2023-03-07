@@ -49,7 +49,58 @@ document.getElementById("text").addEventListener("input", () => {
 });
 
  // Array of possible words for the random paragraph
-    const words = ['Lorem', 'ipsum', 'dolor', 'sit', 'amet', 'consectetur', 'adipiscing', 'elit', 'sed', 'do', 'eiusmod', 'tempor', 'incididunt', 'ut', 'labore', 'et', 'dolore', 'magna', 'aliqua.'];
+ const words = [
+  'apple,',
+  'banana,',
+  'carrot,',
+  'broccoli,',
+  'kale,',
+  'tomato,',
+  'pepper,',
+  'potato,',
+  'lettuce,',
+  'grapefruit,',
+  'orange,',
+  'mango,',
+  'papaya,',
+  'pear,',
+  'watermelon,',
+  'avocado,',
+  'pineapple,',
+  'strawberry,',
+  'blueberry,',
+  'car,',
+  'truck,',
+  'motorcycle,',
+  'suv,',
+  'bus,',
+  'van,',
+  'pizza,',
+  'pasta,',
+  'sushi,',
+  'taco,',
+  'burger,',
+  'fries,',
+  'hotdog,',
+  'ramen,',
+  'pho,',
+  'enchiladas,',
+  'curry,',
+  'stir fry,',
+  'lasagna,',
+  'salad,',
+  'burger,',
+  'pancakes,',
+  'waffles,',
+  'omelette,',
+  'smoothie,',
+  'margarita,',
+  'martini,',
+  'beer,',
+  'wine,',
+  'soda,',
+  'juice,'
+];
 
     // Get a random paragraph
     function getRandomParagraph() {
@@ -65,7 +116,7 @@ document.getElementById("text").addEventListener("input", () => {
     const userInput = document.getElementById('user-input');
     const wpmDisplay = document.getElementById('wpm');
     const startBtn = document.getElementById('start-btn');
-    const stopBtn = document.getElementById('stop-btn');
+    const stopBtn = document.getElementById('stop');
     const randomParagraph = document.getElementById('random-paragraph');
 
     // Start the test
@@ -86,6 +137,25 @@ document.getElementById("text").addEventListener("input", () => {
       startTime = Date.now();
       timerInterval = setInterval(updateTimer, 1000);
     }
+
+    function displayTime() {
+      const now = new Date();
+      let hours = now.getHours();
+      let minutes = now.getMinutes();
+      const ampm = hours >= 12 ? 'PM' : 'AM';
+
+      // Convert to 12-hour format
+      hours = hours % 12;
+      hours = hours ? hours : 12;
+      minutes = minutes < 10 ? '0' + minutes : minutes;
+
+      const timeString = hours + ':' + minutes + ' ' + ampm;
+      console.log('timeString',timeString)
+      document.getElementById('currenttime').innerHTML = timeString;
+    }
+
+    // Call displayTime every second to update the time
+    setInterval(displayTime, 1000);
 
     // Stop the test
     function stopTest() {
@@ -110,3 +180,4 @@ document.getElementById("text").addEventListener("input", () => {
     // Set up event listeners
     startBtn.addEventListener('click', startTest);
     stopBtn.addEventListener('click', stopTest);
+
